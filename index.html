@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#04060f">
+<title>One letter has arrived</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Caveat:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="moon"></div>
+<canvas id="fx"></canvas>
+<div class="fog f1"></div><div class="fog f2"></div>
+<div id="stage"></div>
+
+<!-- Original white messenger owl (inline SVG) -->
+<div id="owl" aria-hidden="true">
+<svg viewBox="0 0 300 200">
+ <defs>
+  <radialGradient id="ob" cx="50%" cy="40%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#cfc8b8"/></radialGradient>
+ </defs>
+ <g class="wing far"><path d="M150 95C140 45 100 14 62 18 88 44 104 78 132 108Z" fill="#b9b2a2"/></g>
+ <path d="M112 112C86 118 60 142 40 165 78 156 104 140 128 130Z" fill="#d9d2c2"/>
+ <ellipse cx="152" cy="110" rx="50" ry="34" fill="url(#ob)"/>
+ <circle cx="204" cy="88" r="27" fill="url(#ob)"/>
+ <circle cx="213" cy="84" r="5.5" fill="#e2a93d"/><circle cx="214.5" cy="84" r="2.4" fill="#1b140c"/>
+ <path d="M226 90l10 6-10 3z" fill="#c9a45c"/>
+ <g class="env-held"><rect x="168" y="134" width="56" height="38" rx="2" fill="#f1e2bd" stroke="#bda274" stroke-width="1"/>
+  <path d="M168 134l28 20 28-20" fill="none" stroke="#bda274" stroke-width="1.2"/><circle cx="196" cy="154" r="7" fill="#7a1522" stroke="#d9a441" stroke-width="1.6"/>
+  <path d="M170 128l-6 10M190 128l6 10" stroke="#cfc8b8" stroke-width="3" stroke-linecap="round"/></g>
+ <g class="wing"><path d="M150 100C128 38 78 6 30 14 66 42 90 82 126 112Z" fill="url(#ob)"/><path d="M60 30C86 48 104 76 124 104" stroke="#cfc8b8" stroke-width="1.5" fill="none"/></g>
+</svg>
+</div>
+
+<!-- The main envelope (opens by itself) -->
+<div id="hero" class="hero" aria-hidden="true"><div class="tilt">
+ <div class="sheet"></div><div class="body"></div><div class="flap"></div>
+ <div class="seal"><i></i><i></i></div>
+</div></div>
+
+<!-- Letters -->
+<article id="letter" class="letter">
+ <div class="paper" id="paper">
+  <div id="text"></div>
+  <p id="ps" class="ps"></p>
+  <button id="next" class="tab" type="button"></button>
+</div>
+</article>
+<div id="finale"><p id="finalLine"></p><div class="mini"></div></div>
+<div id="toast" role="status"></div>
+
+<div class="vig"></div>
+<button id="mute" type="button" aria-label="Mute sound">♪</button>
+<div id="gate"><p>One letter has arrived.</p><button id="enter" type="button">Open it</button></div>
+<script src="script.js"></script>
+</body>
+</html>
